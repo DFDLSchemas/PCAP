@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (c) 2012-2014 Tresys Technology, LLC. All rights reserved.
+
+Developed by: Tresys Technology, LLC
+              http://www.tresys.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal with
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+ 1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimers.
+
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimers in the
+    documentation and/or other materials provided with the distribution.
+
+ 3. Neither the names of Tresys Technology, nor the names of its contributors
+    may be used to endorse or promote products derived from this Software
+    without specific prior written permission.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
+SOFTWARE.
+-->
+
+
+<!--
+Version 1.0   pcap.dfdl.xsd
+
+This DFDL schema provides a DFDL model for PCAP v2.4 binary data, which
+contains network packet capture data.
+
+The message root is 'pcap'.
+-->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+           xmlns:pcap="urn:pcap:2.4"
+           targetNamespace="urn:pcap:2.4">
+
+  <xs:annotation>
+    <xs:appinfo source="http://www.ogf.org/dfdl/">
+      <dfdl:defineVariable name="byte_order" type="xs:string"/>
+
+      <dfdl:defineFormat name="defaults">
+        <dfdl:format alignment="1" alignmentUnits="bytes" binaryBooleanFalseRep="0" binaryBooleanTrueRep="1" binaryCalendarEpoch="1970-01-01T00:00:00+00:00" binaryCalendarRep="bcd" binaryDecimalVirtualPoint="0" binaryFloatRep="ieee" binaryNumberCheckPolicy="lax" binaryNumberRep="binary" binaryPackedSignCodes="C D F C" calendarCenturyStart="53" calendarCheckPolicy="lax" calendarDaysInFirstWeek="4" calendarFirstDayOfWeek="Monday" calendarLanguage="en-US" calendarObserveDST="yes" calendarPatternKind="implicit" calendarPattern="yyyy-MM-dd'T'HH:mm:ss" calendarTimeZone="UTC" choiceLengthKind="implicit" decimalSigned="yes" documentFinalTerminatorCanBeMissing="no" emptyValueDelimiterPolicy="none" encoding="UTF-8" escapeSchemeRef="" fillByte="0" floating="no" ignoreCase="no" initiatedContent="no" initiator="" leadingSkip="0" lengthKind="implicit" lengthUnits="bits" nilKind="literalValue" nilValueDelimiterPolicy="none" nilValue="NIL" occursCountKind="implicit" outputNewLine="%CR;%LF;" prefixIncludesPrefixLength="no" representation="binary" separator="" separatorPosition="infix" sequenceKind="ordered" terminator="" textBidi="no" textBooleanFalseRep="false" textBooleanJustification="left" textBooleanPadCharacter="%SP;" textBooleanTrueRep="true" textCalendarJustification="left" textCalendarPadCharacter="%SP;" textNumberCheckPolicy="lax" textNumberJustification="right" textNumberPadCharacter="0" textNumberPattern="#0" textNumberRep="standard" textNumberRoundingIncrement="0.0" textNumberRoundingMode="roundUp" textNumberRounding="pattern" textOutputMinLength="0" textPadKind="none" textStandardBase="10" textStandardDecimalSeparator="."  textStandardGroupingSeparator="," textStandardInfinityRep="Inf" textStandardNaNRep="NaN" textStandardZeroRep="" textStringJustification="left" textStringPadCharacter="%SP;" textTrimKind="none" textZonedSignStyle="asciiStandard" trailingSkip="0" truncateSpecifiedLengthString="no" useNilForDefault="no" utf16Width="fixed" />
+      </dfdl:defineFormat>
+
+      <dfdl:format ref="pcap:defaults" byteOrder="{ $pcap:byte_order }" />
+
+    </xs:appinfo>
+  </xs:annotation>
+
+  <xs:simpleType name="uint16" dfdl:lengthKind="explicit" dfdl:length="16">
+    <xs:restriction base="xs:unsignedInt"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="uint32" dfdl:lengthKind="explicit" dfdl:length="32">
+    <xs:restriction base="xs:unsignedInt"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="int32" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+
+ <xs:element name="pcap">
+  <xs:complexType>
+    <xs:sequence dfdl:sequenceKind="ordered">
+
+<!--
+  typedef struct pcap_hdr_s {
+        guint32 magic_number;   /* magic number */ (32 bit unsigned integer)
+        guint16 version_major;  /* major version number */
+        guint16 version_minor;  /* minor version number */
+        gint32  thiszone;       /* GMT to local correction */
+        guint32 sigfigs;        /* accuracy of timestamps */
+        guint32 snaplen;        /* max length of captured packets, in octets */
+        guint32 network;        /* data link type */
+  } pcap_hdr_t;
+
+    magic_number: used to detect the file format itself and the byte ordering. The writing application writes 0xa1b2c3d4 with it's native byte ordering format into this field. The reading application will read either 0xa1b2c3d4 (identical) or 0xd4c3b2a1 (swapped). If the reading application reads the swapped 0xd4c3b2a1 value, it knows that all the following fields will have to be swapped too.
+    version_major, version_minor: the version number of this file format (current version is 2.4)
+    thiszone: the correction time in seconds between GMT (UTC) and the local timezone of the following packet header timestamps. Examples: If the timestamps are in GMT (UTC), thiszone is simply 0. If the timestamps are in Central European time (Amsterdam, Berlin, ...) which is GMT + 1:00, thiszone must be -3600. In practice, time stamps are always in GMT, so thiszone is always 0.
+    sigfigs: in theory, the accuracy of time stamps in the capture; in practice, all tools set it to 0
+    snaplen: the "snapshot length" for the capture (typically 65535 or even more, but might be limited by the user), see: incl_len vs. orig_len below
+    network: link-layer header type, specifying the type of headers at the beginning of the packet (e.g. 1 for Ethernet, see tcpdump.org's link-layer header types page for details); this can be various types such as 802.11, 802.11 with various radio information, PPP, Token Ring, FDDI, etc.
+
+-->
+  <xs:element name="global_header" minOccurs="1" maxOccurs="1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="magic_number" type="pcap:uint32"
+          dfdl:byteOrder="bigEndian">
+          <xs:annotation>
+            <xs:appinfo source="http://www.ogf.org/dfdl/">
+              <dfdl:setVariable ref="pcap:byte_order"><![CDATA[{
+                if (xs:unsignedInt(.) eq 2712847316) then 'bigEndian'
+                else if (xs:unsignedInt(.) eq 3569595041) then 'littleEndian'
+                else 'Error: Magic number was not 0xA1B2C3D4 (for bigEndian) or 0xD4C3B2A1 (for littleEndian).'
+              }]]></dfdl:setVariable>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="version_major" type="pcap:uint16" />
+        <xs:element name="version_minor" type="pcap:uint16" />
+        <xs:element name="thiszone" type="pcap:int32" />
+        <xs:element name="sigfigs" type="pcap:uint32" />
+        <xs:element name="snaplen" type="pcap:uint32" />
+        <xs:element name="network" type="pcap:uint32" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+<!--
+  typedef struct pcaprec_hdr_s {
+        guint32 ts_sec;         /* timestamp seconds */
+        guint32 ts_usec;        /* timestamp microseconds */
+        guint32 incl_len;       /* number of octets of packet saved in file */
+        guint32 orig_len;       /* actual length of packet */
+  } pcaprec_hdr_t;
+
+    ts_sec: the date and time when this packet was captured. This value is in seconds since January 1, 1970 00:00:00 GMT; this is also known as a UN*X time_t. You can use the ANSI C time() function from time.h to get this value, but you might use a more optimized way to get this timestamp value. If this timestamp isn't based on GMT (UTC), use thiszone from the global header for adjustments.
+    ts_usec: the microseconds when this packet was captured, as an offset to ts_sec.  Beware: this value shouldn't reach 1 second (1 000 000), in this case ts_sec must be increased instead!
+    incl_len: the number of bytes of packet data actually captured and saved in the file. This value should never become larger than orig_len or the snaplen value of the global header.
+    orig_len: the length of the packet as it appeared on the network when it was captured. If incl_len and orig_len differ, the actually saved packet size was limited by snaplen.
+
+-->
+      <xs:element name="packet" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="header">
+              <xs:complexType>
+                <xs:sequence>
+                  <!--
+                    ts_sec should be modeled with a dateTime type. This is
+                    currently unsupported by daffodil, so model it as an
+                    integer for now.
+                  -->
+                  <xs:element name="ts_sec" type="pcap:uint32"/>
+                  <xs:element name="ts_usec" type="pcap:uint32"/>
+                  <xs:element name="incl_len" type="pcap:uint32"/>
+                  <xs:element name="orig_len" type="pcap:uint32"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="data" type="xs:hexBinary" dfdl:lengthUnits="bytes" dfdl:lengthKind="explicit"
+               dfdl:length="{ ../pcap:header/pcap:incl_len }"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+</xs:schema>
