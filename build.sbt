@@ -2,13 +2,18 @@ scalaVersion in ThisBuild := "2.11.8"
 
 organization := "com.tresys"
 
-name := "pcap"
+name := "dfdl-pcap"
 
 version := "0.0.2"
 
+crossPaths := false
+
 testOptions in ThisBuild += Tests.Argument(TestFrameworks.JUnit, "-v")
 
-resolvers in ThisBuild += "NCSA Sonatype Releases" at "https://opensource.ncsa.illinois.edu/nexus/content/repositories/releases"
+resolvers in ThisBuild ++= Seq(
+  "NCSA Sonatype Releases" at "https://opensource.ncsa.illinois.edu/nexus/content/repositories/releases",
+  "NCSA Sonatype Snapshots" at "https://opensource.ncsa.illinois.edu/nexus/content/repositories/snapshots"
+)
 
 libraryDependencies in ThisBuild := Seq(
   "junit" % "junit" % "4.11" % "test",
