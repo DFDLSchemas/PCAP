@@ -214,7 +214,7 @@ The message root is 'PCAP'.
           dfdl:outputValueCalc="{
           if (fn:exists(../pcap:NetworkLayer/pcap:IPv4)) then 2048
           else if (fn:exists(../pcap:NetworkLayer/pcap:IPv6 )) then 34525
-          else daf:error() }"/>
+          else fn:error('pcap', 'fn:error called.', .) }"/>
         <xs:element ref="pcap:NetworkLayer" />
       </xs:sequence>
     </xs:complexType>
