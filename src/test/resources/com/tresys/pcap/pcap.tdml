@@ -4,14 +4,24 @@
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
-  defaultRoundTrip="true">
+  defaultRoundTrip="true"
+  defaultConfig="largerMaxOccurs">
   
+  <tdml:defineConfig name="largerMaxOccurs">
+    <daf:tunables>
+      <daf:maxOccursBounds>50000</daf:maxOccursBounds>
+    </daf:tunables>
+  </tdml:defineConfig>
+
   <tdml:defineConfig name="littleEndian">
     <daf:externalVariableBindings>
 	  <daf:bind name="dfdl:byteOrder">littleEndian</daf:bind>
     </daf:externalVariableBindings>
+    <daf:tunables>
+      <daf:maxOccursBounds>50000</daf:maxOccursBounds>
+    </daf:tunables>
   </tdml:defineConfig>
-  
+
   <!--
     Test name: pcap_test_tcp_ecn
        Schema: pcap.dfdl.xsd
@@ -20,18 +30,19 @@
       using ECN (Explicit Congestion Notification) feature per RFC3168. Frame 48 experienced Congestion Encountered. 
   -->
 
-  <!-- This test cannot round trip.
+  <!-- This test cannot round trip without three pass mode.
   
   Two of the packets originally have length 58 and are not padded to 60.
   When we unparse them we pad them to 60. On the re-parse, the <InclLen>
   will be 60 instead of 58 and the round trip will fail.
   
   The schema in essence accepts data that it cannot and will not generate
-  on output.
+  on output. Three pass will reparse the data, then unparse again, and that
+  will match the length 60. 
   -->
   <tdml:parserTestCase name="pcap_test_tcp_ecn" root="PCAP"
     model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test"
-    roundTrip='false'>
+    roundTrip='threePass'>
     <tdml:document>
       <tdml:documentPart type="file">data/tcp.ecn.pcap</tdml:documentPart>
     </tdml:document>
