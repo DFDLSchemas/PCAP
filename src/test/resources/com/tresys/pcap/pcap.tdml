@@ -5,14 +5,8 @@
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
   defaultRoundTrip="true"
-  defaultConfig="largerMaxOccurs">
+  defaultConfig="littleEndian">
   
-  <tdml:defineConfig name="largerMaxOccurs">
-    <daf:tunables>
-      <daf:maxOccursBounds>50000</daf:maxOccursBounds>
-    </daf:tunables>
-  </tdml:defineConfig>
-
   <tdml:defineConfig name="littleEndian">
     <daf:externalVariableBindings>
 	  <daf:bind name="dfdl:byteOrder">littleEndian</daf:bind>
@@ -22,6 +16,24 @@
     </daf:tunables>
   </tdml:defineConfig>
 
+<!-- Test name: pcap_test_tcp_ecn_no_roundtrip
+       Purpose: Show that ecn data parses correctly. Note that this data is not
+       actually conforming to TCP ECN specs. The data is too short (58 bytes and
+       54 bytes, rather than expected minimum length 60 bytes). However, this data
+       parses correctly anyway. We consider it "well formed" just not valid. 
+-->
+ <tdml:parserTestCase name="pcap_test_tcp_ecn_no_roundtrip" root="PCAP"
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test"
+    roundTrip='none'>
+    <tdml:document>
+      <tdml:documentPart type="file">data/tcp.ecn.pcap</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">infosets/tcp.ecn.pcap.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+  
   <!--
     Test name: pcap_test_tcp_ecn
        Schema: pcap.dfdl.xsd
@@ -47,7 +59,7 @@
       <tdml:documentPart type="file">data/tcp.ecn.pcap</tdml:documentPart>
     </tdml:document>
     <tdml:infoset>
-      <tdml:dfdlInfoset type="file">infosets/tcp.ecn.pcap.xml</tdml:dfdlInfoset>
+      <tdml:dfdlInfoset type="file">infosets/tcp.ecn.pcap-reparse.xml</tdml:dfdlInfoset>
     </tdml:infoset>
   </tdml:parserTestCase>
 
@@ -59,7 +71,7 @@
   -->
 
   <tdml:parserTestCase name="pcap_test_dns" root="PCAP"
-    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test" config="littleEndian">
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
     <tdml:document>
       <tdml:documentPart type="file">data/dns.cap</tdml:documentPart>
     </tdml:document>
@@ -76,7 +88,7 @@
   -->
 
   <tdml:parserTestCase name="pcap_test_http_ipv6" root="PCAP"
-    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test" config="littleEndian">
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
     <tdml:document>
       <tdml:documentPart type="file">data/http.ipv6.cap</tdml:documentPart>
     </tdml:document>
@@ -94,7 +106,7 @@
   -->
 
   <tdml:parserTestCase name="pcap_test_icmp" root="PCAP"
-    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test" config="littleEndian">
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
     <tdml:document>
       <tdml:documentPart type="file">data/icmp.cap</tdml:documentPart>
     </tdml:document>
@@ -106,7 +118,7 @@
   
    <tdml:unparserTestCase name="pcap_test_icmp_unparse1" root="PCAP"
     model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test" 
-    roundTrip="true" config="littleEndian">
+    roundTrip="true">
     <tdml:document>
       <tdml:documentPart type="file">data/icmp1.cap</tdml:documentPart>
     </tdml:document>
@@ -142,7 +154,7 @@
   -->
 
   <tdml:parserTestCase name="invalid_version" root="PCAP"
-    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test - DFDL-928" config="littleEndian">
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test - DFDL-928">
     <tdml:document>
       <tdml:documentPart type="file">data/icmp.badVersion.cap</tdml:documentPart>
     </tdml:document>
@@ -160,7 +172,7 @@
   -->
 
   <tdml:parserTestCase name="invalid_network_type" root="PCAP"
-    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test - DFDL-928" config="littleEndian">
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test - DFDL-928">
     <tdml:document>
       <tdml:documentPart type="file">data/http.ipv6.badNetwork.cap</tdml:documentPart>
     </tdml:document>

@@ -9,7 +9,7 @@ lazy val root = (project in file(".")).
     )),
     name := "dfdl-pcap",
     libraryDependencies := Seq(
-      "org.apache.daffodil" %% "daffodil-tdml-processor" % "2.3.0" % "test",
+      "org.apache.daffodil" %% "daffodil-tdml-processor" % "2.5.0" % "test",
       "junit" % "junit" % "4.12" % "test",
       "com.novocode" % "junit-interface" % "0.11" % "test",
     )
