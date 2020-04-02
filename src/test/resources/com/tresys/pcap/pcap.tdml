@@ -4,6 +4,7 @@
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+  xmlns:pcap="urn:pcap:2.4"
   defaultRoundTrip="true"
   defaultConfig="littleEndian">
   
@@ -115,8 +116,7 @@
     </tdml:infoset>
   </tdml:parserTestCase>
   
-  
-   <tdml:unparserTestCase name="pcap_test_icmp_unparse1" root="PCAP"
+  <tdml:unparserTestCase name="pcap_test_icmp_unparse1" root="PCAP"
     model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test" 
     roundTrip="true">
     <tdml:document>
@@ -178,7 +178,9 @@
     </tdml:document>
     <tdml:errors>
       <tdml:error>Parse Error: Assertion failed</tdml:error>
-      <tdml:error>Link layer type is not Ethernet</tdml:error>
+      <tdml:error>Link layer</tdml:error>
+      <tdml:error>unknown</tdml:error>
+      <tdml:error>21</tdml:error>
     </tdml:errors>
   </tdml:parserTestCase>
   
