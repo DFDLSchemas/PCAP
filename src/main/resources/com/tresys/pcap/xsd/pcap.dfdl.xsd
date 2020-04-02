@@ -184,7 +184,7 @@ The message root is 'PCAP'.
                     <xs:element name="Seconds" type="pcap:uint32"/> <!-- TODO: ts_sec should be a dateTime -->
                     <xs:element name="USeconds" type="pcap:uint32"/>
                     <xs:element name="InclLen" type="pcap:uint32" 
-                       dfdl:outputValueCalc="{ if (dfdl:valueLength(../../pcap:LinkLayer/pcap:Ethernet, 'bytes') le 60) then 60 else dfdl:valueLength(../../pcap:LinkLayer/pcap:Ethernet, 'bytes') }"/>
+                       dfdl:outputValueCalc="{ if (dfdl:valueLength(../../pcap:LinkLayer, 'bytes') le 60) then 60 else dfdl:valueLength(../../pcap:LinkLayer, 'bytes') }"/>
                     <xs:element name="OrigLen" type="pcap:uint32" 
                        dfdl:outputValueCalc="{ ../InclLen }"/>
                   </xs:sequence>
@@ -204,7 +204,27 @@ The message root is 'PCAP'.
   <xs:element name="LinkLayer">
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="pcap:Ethernet" />
+        <xs:choice dfdl:choiceDispatchKey="{ xs:string(../../PCAPHeader/Network) }">
+          <xs:element ref="pcap:Ethernet" dfdl:choiceBranchKey="1"/>
+          <!-- add additional network types here -->
+        </xs:choice>
+        <xs:sequence>
+          <!--
+            If you want a good diagnostic message about a choice that isn't one of the viable dispatch keys,
+            then this nested choice idiom is the way to do that.
+
+            Without this, you'll still get a diagnostic about "All choice alternatives failed" and it will displaty
+            the offending choice dispatch key value, and give you the line number in the schema. So not bad, but not
+            a specific diagnostic message mentioning the data element that had the incorrect value.
+            -->
+          <xs:annotation>
+            <xs:appinfo source="http://www.ogf.org/dfdl/">
+              <dfdl:assert
+                message="{ fn:concat('Link layer type unknown. PCAPHeader/Network was ', xs:string(../../PCAPHeader/Network)) }"
+                test="{ fn:false() }"/>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:sequence>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -212,11 +232,6 @@ The message root is 'PCAP'.
   <xs:element name="Ethernet">
     <xs:complexType>
       <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Link layer type is not Ethernet" test="{ xs:unsignedInt(../../../PCAPHeader/Network) eq 1 }" />
-          </xs:appinfo>
-        </xs:annotation>
         <xs:element name="MACDest" type="pcap:hexByte" dfdl:length="6" />
         <xs:element name="MACSrc" type="pcap:hexByte" dfdl:length="6" />
         <xs:element name="Ethertype" type="pcap:bit" dfdl:length="16"
@@ -234,9 +249,9 @@ The message root is 'PCAP'.
 
   <xs:element name="NetworkLayer">
     <xs:complexType>
-      <xs:choice>
-        <xs:element ref="pcap:IPv4" />
-        <xs:element ref="pcap:IPv6" />
+      <xs:choice dfdl:choiceDispatchKey="{ xs:string(../Ethertype) }">
+        <xs:element dfdl:choiceBranchKey="2048" ref="pcap:IPv4" />
+        <xs:element dfdl:choiceBranchKey="34525" ref="pcap:IPv6" />
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -326,11 +341,6 @@ The message root is 'PCAP'.
   <xs:element name="IPv4">
     <xs:complexType>
       <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Ethertype is not IPv4" test="{ xs:unsignedInt(../../Ethertype) eq 2048 }" />
-          </xs:appinfo>
-        </xs:annotation>
         <xs:element name='IPv4Header'>
           <xs:complexType>
             <xs:sequence>
@@ -370,9 +380,9 @@ The message root is 'PCAP'.
           </xs:complexType>
         </xs:element>
         <xs:element name="Protocol" type="xs:unsignedInt" dfdl:inputValueCalc="{ xs:unsignedInt(../IPv4Header/Protocol) }" />
-        <xs:choice>
-            <xs:element ref="pcap:TransportLayer" dfdl:lengthKind="explicit" dfdl:lengthUnits="bytes" dfdl:length="{ xs:unsignedInt(../IPv4Header/Length) - 20 }" />
-            <xs:element ref="pcap:ICMPv4" dfdl:lengthKind="explicit" dfdl:lengthUnits="bytes" dfdl:length="{ xs:unsignedInt(../IPv4Header/Length) - 20 }"/>
+        <xs:choice dfdl:choiceDispatchKey="{ xs:string(./Protocol) }">
+            <xs:element dfdl:choiceBranchKey="6 17" ref="pcap:TransportLayer" dfdl:lengthKind="explicit" dfdl:lengthUnits="bytes" dfdl:length="{ xs:unsignedInt(../IPv4Header/Length) - 20 }" />
+            <xs:element dfdl:choiceBranchKey="1" ref="pcap:ICMPv4" dfdl:lengthKind="explicit" dfdl:lengthUnits="bytes" dfdl:length="{ xs:unsignedInt(../IPv4Header/Length) - 20 }"/>
         </xs:choice>
       </xs:sequence>
     </xs:complexType>
@@ -381,11 +391,6 @@ The message root is 'PCAP'.
   <xs:element name="ICMPv4">
     <xs:complexType>
       <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Protocol type is not ICMPv4" test="{ xs:unsignedInt(../Protocol) eq 1 }" />
-          </xs:appinfo>
-        </xs:annotation>
         <xs:element name="Type" type="pcap:bit" dfdl:length="8"
           dfdl:outputValueCalc="{
           if (fn:exists(../EchoRequest)) then 8
@@ -397,29 +402,19 @@ The message root is 'PCAP'.
           else if (fn:exists(../EchoReply )) then 0
           else -1 }"/>
         <xs:element name="Checksum" type="pcap:bit" dfdl:length="16" />
-        <xs:choice>
-          <xs:element name="EchoRequest">
+        <xs:choice dfdl:choiceDispatchKey="{ fn:concat(xs:string(./Type), '_', xs:string(./Code)) }" >
+          <xs:element name="EchoRequest" dfdl:choiceBranchKey="8_0">
             <xs:complexType>
               <xs:sequence>
-                <xs:annotation>
-                  <xs:appinfo source="http://www.ogf.org/dfdl/">
-                    <dfdl:discriminator message="ICMPv4 type is not EchoRequest" test="{ (../Type eq 8) and (../Code eq 0) }" />
-                  </xs:appinfo>
-                </xs:annotation>
                 <xs:element name="Identifier" type="pcap:bit" dfdl:length="16" />
                 <xs:element name="SequenceNumber" type="pcap:bit" dfdl:length="16" />
                 <xs:element name="Payload" type="pcap:hexByte" dfdl:length="{ (../../../IPv4Header/Length - 20) - 8 }"/>
               </xs:sequence>
             </xs:complexType>
           </xs:element>
-          <xs:element name="EchoReply">
+          <xs:element name="EchoReply" dfdl:choiceBranchKey="0_0">
             <xs:complexType>
               <xs:sequence>
-                <xs:annotation>
-                  <xs:appinfo source="http://www.ogf.org/dfdl/">
-                    <dfdl:discriminator message="ICMPv4 type is not EchoReply" test="{ (../Type eq 0) and (../Code eq 0) }" />
-                  </xs:appinfo>
-                </xs:annotation>
                 <xs:element name="Identifier" type="pcap:bit" dfdl:length="16" />
                 <xs:element name="SequenceNumber" type="pcap:bit" dfdl:length="16" />
                 <xs:element name="Payload" type="pcap:hexByte" dfdl:length="{ (../../../IPv4Header/Length - 20) - 8 }" />
@@ -434,11 +429,6 @@ The message root is 'PCAP'.
   <xs:element name="IPv6">
     <xs:complexType>
       <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Ethertype is not IPv6" test="{ xs:unsignedInt(../../Ethertype) eq 34525 }" />
-          </xs:appinfo>
-        </xs:annotation>
         <xs:element name='IPv6Header'>
           <xs:complexType>
             <xs:sequence>
@@ -473,9 +463,9 @@ The message root is 'PCAP'.
 
   <xs:element name="TransportLayer">
     <xs:complexType>
-      <xs:choice>
-        <xs:element ref="pcap:TCP" />
-        <xs:element ref="pcap:UDP" />
+      <xs:choice dfdl:choiceDispatchKey="{ xs:string(../Protocol) }">
+        <xs:element ref="pcap:TCP" dfdl:choiceBranchKey="6"/>
+        <xs:element ref="pcap:UDP" dfdl:choiceBranchKey="17"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -483,11 +473,6 @@ The message root is 'PCAP'.
   <xs:element name="TCP">
     <xs:complexType>
       <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Protocol type is not TCP" test="{ xs:unsignedInt(../../Protocol) eq 6 }" />
-          </xs:appinfo>
-        </xs:annotation>
         <xs:element name='TCPHeader'>
           <xs:complexType>
             <xs:sequence>
@@ -496,7 +481,7 @@ The message root is 'PCAP'.
               <xs:element name="Seq" type="pcap:bit" dfdl:length="32" />
               <xs:element name="Ack" type="pcap:bit" dfdl:length="32" />
               <xs:element name="DataOffset" type="pcap:bit" dfdl:length="4"
-                dfdl:outputValueCalc="{ (dfdl:valueLength(../Options, 'bytes') div 4) + 5 }" />
+                dfdl:outputValueCalc="{ xs:unsignedInt((dfdl:valueLength(../Options, 'bytes') div 4) + 5) }" />
               <xs:element name="Reserved" type="pcap:bit" dfdl:length="3" />
               <xs:element name="Flags" type="pcap:bit" dfdl:length="9" />
               <xs:element name="WindowSize" type="pcap:bit" dfdl:length="16" />
@@ -517,11 +502,6 @@ The message root is 'PCAP'.
   <xs:element name="UDP">
     <xs:complexType>
       <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Protocol type is not UDP" test="{ xs:unsignedInt(../../Protocol) eq 17 }" />
-          </xs:appinfo>
-        </xs:annotation>
         <xs:element name='UDPHeader'>
           <xs:complexType>
             <xs:sequence>
