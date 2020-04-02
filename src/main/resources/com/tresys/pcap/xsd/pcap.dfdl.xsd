@@ -126,20 +126,28 @@ The message root is 'PCAP'.
         <xs:element name="PCAPHeader" dfdl:byteOrder="bigEndian">
           <xs:complexType>
             <xs:sequence dfdl:byteOrder="bigEndian">
-              <xs:element name="MagicNumber" type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian">
+              <!-- 
+                   We depend on external variable $dfdl:byteOrder to specify what the output's byte order should be. 
+               -->
+              <!-- 
+                   Versions of Daffodil before 2.6.0 had a bug and weren't accepting the dfdl:property syntax for this 
+                   outputValueCalc property. So for compatibility with 2.5.0 and 2.4.0 of Daffodil, we've rewritten it
+                   to the conventional short-form syntax that is accepted in all releases of Daffodil. 
+               -->
+              <xs:element name="MagicNumber" type="xs:hexBinary" dfdl:lengthKind="explicit" 
+                          dfdl:length="4" dfdl:lengthUnits="bytes" 
+                          dfdl:outputValueCalc="{ 
+                            if ($dfdl:byteOrder eq 'bigEndian') 
+                            then xs:hexBinary('A1B2C3D4') 
+                            else xs:hexBinary('D4C3B2A1') 
+                          }" >
+                <!-- when parsing, however, a PCAP file specifies the byte order in the value of the first element. -->
                 <xs:annotation>
                   <xs:appinfo source="http://www.ogf.org/dfdl/">
                     <dfdl:assert message="Magic number was not 0xA1B2C3D4 (for bigEndian) or 0xD4C3B2A1 (for littleEndian)."
                                  test="{ (. eq xs:hexBinary('A1B2C3D4')) or (. eq xs:hexBinary('D4C3B2A1')) }" />
-                    <dfdl:setVariable ref="pcap:ByteOrder" value="{ if (. eq xs:hexBinary('A1B2C3D4')) then 'bigEndian' else 'littleEndian' }" />
-                    <!-- We depend on external variable $dfdl:byteOrder to specify what the output's byte order should be. -->
-                    <dfdl:element>
-                      <dfdl:property name="outputValueCalc"><![CDATA[{
-                        if ($dfdl:byteOrder eq 'bigEndian') 
-                          then xs:hexBinary('A1B2C3D4') 
-                          else xs:hexBinary('D4C3B2A1')
-                      }]]></dfdl:property>
-                    </dfdl:element>
+                    <dfdl:setVariable ref="pcap:ByteOrder" 
+                      value="{ if (. eq xs:hexBinary('A1B2C3D4')) then 'bigEndian' else 'littleEndian' }" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
@@ -151,7 +159,8 @@ The message root is 'PCAP'.
                     <xs:sequence>
                       <xs:annotation>
                         <xs:appinfo source="http://www.ogf.org/dfdl/">
-                          <dfdl:assert message="PCAP version must be 2.4" test="{ (xs:unsignedInt(./Major) eq 2) and (xs:unsignedInt(./Minor) eq 4) }" />
+                          <dfdl:assert message="PCAP version must be 2.4" 
+                            test="{ (xs:unsignedInt(./Major) eq 2) and (xs:unsignedInt(./Minor) eq 4) }" />
                         </xs:appinfo>
                       </xs:annotation>
                     </xs:sequence>

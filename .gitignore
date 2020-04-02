@@ -5,4 +5,5 @@ target
 project/target/
 .cache-tests
 .cache-main
-
+*.iml
+/.idea/
