@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tdml:testSuite suiteName="PCAP"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+  xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
+  xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+  xmlns:pcap="urn:pcap:2.4"
+  defaultRoundTrip="true"
+  defaultConfig="littleEndian">
+  
+  <tdml:defineConfig name="littleEndian">
+    <daf:externalVariableBindings>
+	  <daf:bind name="dfdl:byteOrder">littleEndian</daf:bind>
+    </daf:externalVariableBindings>
+    <daf:tunables>
+      <daf:maxOccursBounds>50000</daf:maxOccursBounds>
+    </daf:tunables>
+  </tdml:defineConfig>
+
+ <tdml:parserTestCase name="udp-fragmented" root="PCAP"
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test"
+    roundTrip='none'>
+    <tdml:document>
+      <tdml:documentPart type="file">data/udp-fragmented.pcap</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">infosets/udp-fragmented.pcap.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+  
+</tdml:testSuite>
