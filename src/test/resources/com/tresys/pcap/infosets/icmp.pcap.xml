@@ -17,13 +17,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>005056E01449</MACDest>
         <MACSrc>000C29340BDE</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -36,11 +36,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>11123</Checksum>
-              <IPSrc>192.168.158.139</IPSrc>
-              <IPDest>174.137.42.77</IPDest>
+              <IPSrc><value>192.168.158.139</value></IPSrc>
+              <IPDest><value>174.137.42.77</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>8</Type>
               <Code>0</Code>
               <Checksum>10844</Checksum>
@@ -49,11 +49,11 @@
                 <SequenceNumber>8448</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoRequest>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -62,13 +62,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>000C29340BDE</MACDest>
         <MACSrc>005056E01449</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -81,11 +81,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>35797</Checksum>
-              <IPSrc>174.137.42.77</IPSrc>
-              <IPDest>192.168.158.139</IPDest>
+              <IPSrc><value>174.137.42.77</value></IPSrc>
+              <IPDest><value>192.168.158.139</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>0</Type>
               <Code>0</Code>
               <Checksum>12892</Checksum>
@@ -94,11 +94,11 @@
                 <SequenceNumber>8448</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoReply>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -107,13 +107,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>005056E01449</MACDest>
         <MACSrc>000C29340BDE</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -126,11 +126,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>11120</Checksum>
-              <IPSrc>192.168.158.139</IPSrc>
-              <IPDest>174.137.42.77</IPDest>
+              <IPSrc><value>192.168.158.139</value></IPSrc>
+              <IPDest><value>174.137.42.77</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>8</Type>
               <Code>0</Code>
               <Checksum>10588</Checksum>
@@ -139,11 +139,11 @@
                 <SequenceNumber>8704</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoRequest>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -152,13 +152,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>000C29340BDE</MACDest>
         <MACSrc>005056E01449</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -171,11 +171,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>35794</Checksum>
-              <IPSrc>174.137.42.77</IPSrc>
-              <IPDest>192.168.158.139</IPDest>
+              <IPSrc><value>174.137.42.77</value></IPSrc>
+              <IPDest><value>192.168.158.139</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>0</Type>
               <Code>0</Code>
               <Checksum>12636</Checksum>
@@ -184,11 +184,11 @@
                 <SequenceNumber>8704</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoReply>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -197,13 +197,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>005056E01449</MACDest>
         <MACSrc>000C29340BDE</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -216,11 +216,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>11117</Checksum>
-              <IPSrc>192.168.158.139</IPSrc>
-              <IPDest>174.137.42.77</IPDest>
+              <IPSrc><value>192.168.158.139</value></IPSrc>
+              <IPDest><value>174.137.42.77</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>8</Type>
               <Code>0</Code>
               <Checksum>10332</Checksum>
@@ -229,11 +229,11 @@
                 <SequenceNumber>8960</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoRequest>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -242,13 +242,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>000C29340BDE</MACDest>
         <MACSrc>005056E01449</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -261,11 +261,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>35782</Checksum>
-              <IPSrc>174.137.42.77</IPSrc>
-              <IPDest>192.168.158.139</IPDest>
+              <IPSrc><value>174.137.42.77</value></IPSrc>
+              <IPDest><value>192.168.158.139</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>0</Type>
               <Code>0</Code>
               <Checksum>12380</Checksum>
@@ -274,11 +274,11 @@
                 <SequenceNumber>8960</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoReply>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -287,13 +287,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>005056E01449</MACDest>
         <MACSrc>000C29340BDE</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -306,11 +306,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>11112</Checksum>
-              <IPSrc>192.168.158.139</IPSrc>
-              <IPDest>174.137.42.77</IPDest>
+              <IPSrc><value>192.168.158.139</value></IPSrc>
+              <IPDest><value>174.137.42.77</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>8</Type>
               <Code>0</Code>
               <Checksum>10076</Checksum>
@@ -319,11 +319,11 @@
                 <SequenceNumber>9216</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoRequest>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -332,13 +332,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>000C29340BDE</MACDest>
         <MACSrc>005056E01449</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -351,11 +351,11 @@
               <TTL>128</TTL>
               <Protocol>1</Protocol>
               <Checksum>35777</Checksum>
-              <IPSrc>174.137.42.77</IPSrc>
-              <IPDest>192.168.158.139</IPDest>
+              <IPSrc><value>174.137.42.77</value></IPSrc>
+              <IPDest><value>192.168.158.139</value></IPDest>
             </IPv4Header>
             <Protocol>1</Protocol>
-            <pcap:ICMPv4>
+            <ICMPv4>
               <Type>0</Type>
               <Code>0</Code>
               <Checksum>12124</Checksum>
@@ -364,10 +364,10 @@
                 <SequenceNumber>9216</SequenceNumber>
                 <Payload>6162636465666768696A6B6C6D6E6F7071727374757677616263646566676869</Payload>
               </EchoReply>
-            </pcap:ICMPv4>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+            </ICMPv4>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
 </pcap:PCAP>

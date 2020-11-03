@@ -10,7 +10,7 @@
   
   <tdml:defineConfig name="littleEndian">
     <daf:externalVariableBindings>
-	  <daf:bind name="dfdl:byteOrder">littleEndian</daf:bind>
+	    <daf:bind name="dfdl:byteOrder">littleEndian</daf:bind>
     </daf:externalVariableBindings>
     <daf:tunables>
       <daf:maxOccursBounds>50000</daf:maxOccursBounds>
@@ -64,13 +64,6 @@
     </tdml:infoset>
   </tdml:parserTestCase>
 
-  <!--
-    Test name: pcap_test_dns
-       Schema: pcap.dfdl.xsd
-         Root: PCAP
-      Purpose: This test is to exercise the pcap schema.
-  -->
-
   <tdml:parserTestCase name="pcap_test_dns" root="PCAP"
     model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
     <tdml:document>
@@ -80,13 +73,6 @@
       <tdml:dfdlInfoset type="file">infosets/dns.pcap.xml</tdml:dfdlInfoset>
     </tdml:infoset>
   </tdml:parserTestCase>
-
-  <!--
-    Test name: pcap_test_http_ipv6
-       Schema: pcap.dfdl.xsd
-         Root: PCAP
-      Purpose: This test is to exercise the pcap schema.
-  -->
 
   <tdml:parserTestCase name="pcap_test_http_ipv6" root="PCAP"
     model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
@@ -98,13 +84,6 @@
     </tdml:infoset>
   </tdml:parserTestCase>
 
-
-  <!--
-    Test name: pcap_test_icmp
-       Schema: pcap.dfdl.xsd
-         Root: PCAP
-      Purpose: This test is to exercise the pcap schema.
-  -->
 
   <tdml:parserTestCase name="pcap_test_icmp" root="PCAP"
     model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
@@ -168,7 +147,7 @@
     Test name: invalid_network_type
        Schema: pcap.dfdl.xsd
          Root: PCAP
-      Purpose: This test demonstrates that the pcap schema will validate the network typer, which currently must be 1 (LINKTYPE_ETHERNET)
+      Purpose: This test demonstrates that the pcap schema will validate the network type, which currently must be 1 (LINKTYPE_ETHERNET)
   -->
 
   <tdml:parserTestCase name="invalid_network_type" root="PCAP"

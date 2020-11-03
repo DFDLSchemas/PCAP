@@ -17,13 +17,13 @@
       <InclLen>94</InclLen>
       <OrigLen>94</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0011258295B5</MACDest>
         <MACSrc>00D009E3E8DE</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -31,12 +31,12 @@
               <PayloadLength>40</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8102D000002D009FFFEE3E8DE</IPSrc>
-              <IPDest>200106F8090007C00000000000000002</IPDest>
+              <IPSrc><value>200106F8102D000002D009FFFEE3E8DE</value></IPSrc>
+              <IPDest><value>200106F8090007C00000000000000002</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>59201</PortSRC>
                   <PortDest>80</PortDest>
@@ -51,12 +51,12 @@
                   <Options>020405A00402080A000A22A80000000001030305</Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -65,13 +65,13 @@
       <InclLen>82</InclLen>
       <OrigLen>82</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00D009E3E8DE</MACDest>
         <MACSrc>0011258295B5</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -79,12 +79,12 @@
               <PayloadLength>28</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8090007C00000000000000002</IPSrc>
-              <IPDest>200106F8102D000002D009FFFEE3E8DE</IPDest>
+              <IPSrc><value>200106F8090007C00000000000000002</value></IPSrc>
+              <IPDest><value>200106F8102D000002D009FFFEE3E8DE</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>80</PortSRC>
                   <PortDest>59201</PortDest>
@@ -99,12 +99,12 @@
                   <Options>0204059804020000</Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -113,13 +113,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0011258295B5</MACDest>
         <MACSrc>00D009E3E8DE</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -127,12 +127,12 @@
               <PayloadLength>20</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8102D000002D009FFFEE3E8DE</IPSrc>
-              <IPDest>200106F8090007C00000000000000002</IPDest>
+              <IPSrc><value>200106F8102D000002D009FFFEE3E8DE</value></IPSrc>
+              <IPDest><value>200106F8090007C00000000000000002</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>59201</PortSRC>
                   <PortDest>80</PortDest>
@@ -147,12 +147,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -161,13 +161,13 @@
       <InclLen>314</InclLen>
       <OrigLen>314</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0011258295B5</MACDest>
         <MACSrc>00D009E3E8DE</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -175,12 +175,12 @@
               <PayloadLength>260</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8102D000002D009FFFEE3E8DE</IPSrc>
-              <IPDest>200106F8090007C00000000000000002</IPDest>
+              <IPSrc><value>200106F8102D000002D009FFFEE3E8DE</value></IPSrc>
+              <IPDest><value>200106F8090007C00000000000000002</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>59201</PortSRC>
                   <PortDest>80</PortDest>
@@ -195,12 +195,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data>474554202F20485454502F312E300D0A486F73743A20636C2D313938352E68616D2D30312E64652E73697878732E6E65740D0A4163636570743A20746578742F68746D6C2C20746578742F706C61696E2C20746578742F6373732C20746578742F73676D6C2C202A2F2A3B713D302E30310D0A4163636570742D456E636F64696E673A20677A69702C20627A6970320D0A4163636570742D4C616E67756167653A20656E0D0A557365722D4167656E743A204C796E782F322E382E3672656C2E32206C69627777772D464D2F322E31342053534C2D4D4D2F312E342E31204F70656E53534C2F302E392E38620D0A0D0A</Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -209,13 +209,13 @@
       <InclLen>1506</InclLen>
       <OrigLen>1506</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00D009E3E8DE</MACDest>
         <MACSrc>0011258295B5</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -223,12 +223,12 @@
               <PayloadLength>1452</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8090007C00000000000000002</IPSrc>
-              <IPDest>200106F8102D000002D009FFFEE3E8DE</IPDest>
+              <IPSrc><value>200106F8090007C00000000000000002</value></IPSrc>
+              <IPDest><value>200106F8102D000002D009FFFEE3E8DE</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>80</PortSRC>
                   <PortDest>59201</PortDest>
@@ -243,12 +243,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data>485454502F312E3120323030204F4B0D0A446174653A2053756E2C2030352041756720323030372031393A31363A343420474D540D0A5365727665723A204170616368650D0A436F6E74656E742D4C656E6774683A20323132310D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A3C21444F43545950452048544D4C205055424C494320222D2F2F5733432F2F4454442048544D4C20332E322046696E616C2F2F454E223E0A3C68746D6C3E0A203C686561643E0A20203C7469746C653E496E646578206F66202F3C2F7469746C653E0A203C2F686561643E0A203C626F64793E0A3C68313E496E646578206F66202F3C2F68313E0A3C7072653E3C696D67207372633D222F69636F6E732F626C616E6B2E6769662220616C743D2249636F6E20223E203C6120687265663D223F433D4E3B4F3D44223E4E616D653C2F613E20202020202020202020202020202020202020203C6120687265663D223F433D4D3B4F3D41223E4C617374206D6F6469666965643C2F613E2020202020203C6120687265663D223F433D533B4F3D41223E53697A653C2F613E20203C6120687265663D223F433D443B4F3D41223E4465736372697074696F6E3C2F613E3C68723E3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D223230322D766F72626572656974756E672F223E3230322D766F72626572656974756E672F3C2F613E2020202020202030362D4A756C2D323030372031343A3331202020202D2020200A3C696D67207372633D222F69636F6E732F6C61796F75742E6769662220616C743D225B2020205D223E203C6120687265663D22456666696369656E745F566964656F5F6F6E5F64656D616E645F6F7665725F4D756C7469636173742E706466223E456666696369656E745F566964656F5F6F6E5F642E2E2667743B3C2F613E2031392D4465632D323030362030333A313720203239314B20200A3C696D67207372633D222F69636F6E732F756E6B6E6F776E2E6769662220616C743D225B2020205D223E203C6120687265663D2257656C636F6D65253230537472616E676572212121223E57656C636F6D6520537472616E6765722121213C2F613E202020202032382D4465632D323030362030333A343620202020302020200A3C696D67207372633D222F69636F6E732F746578742E6769662220616C743D225B5458545D223E203C6120687265663D22626172736368656C2E68746D223E626172736368656C2E68746D3C2F613E20202020202020202020202033312D4A756C2D323030372030323A323120202034344B20200A3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D22626E642F223E626E642F3C2F613E202020202020202020202020202020202020202033302D4465632D323030362030383A3539202020202D2020200A3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D226369612F223E6369612F3C2F613E202020202020202020202020202020202020202032382D4A756E2D323030372030303A3034202020202D2020200A3C696D67207372633D222F69636F6E732F6C61796F75742E6769662220616C743D225B2020205D223E203C6120687265663D22636973636F5F63636E615F3634302D3830315F636F6D6D616E645F7265666572656E63655F67756964652E706466223E636973636F5F63636E615F3634302D3830315F632E2E2667743B3C2F613E2032382D4465632D323030362030333A343820203233364B20200A3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D22646F63</Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -257,13 +257,13 @@
       <InclLen>901</InclLen>
       <OrigLen>901</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00D009E3E8DE</MACDest>
         <MACSrc>0011258295B5</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -271,12 +271,12 @@
               <PayloadLength>847</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8090007C00000000000000002</IPSrc>
-              <IPDest>200106F8102D000002D009FFFEE3E8DE</IPDest>
+              <IPSrc><value>200106F8090007C00000000000000002</value></IPSrc>
+              <IPDest><value>200106F8102D000002D009FFFEE3E8DE</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>80</PortSRC>
                   <PortDest>59201</PortDest>
@@ -291,12 +291,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data>2F223E646F632F3C2F613E202020202020202020202020202020202020202031392D5365702D323030362030313A3433202020202D2020200A3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D22667265656E657470726F746F2F223E667265656E657470726F746F2F3C2F613E202020202020202020202030362D4465632D323030362030393A3030202020202D2020200A3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D226B6F72727570742F223E6B6F72727570742F3C2F613E2020202020202020202020202020202030332D4A756C2D323030372031313A3537202020202D2020200A3C696D67207372633D222F69636F6E732F666F6C6465722E6769662220616C743D225B4449525D223E203C6120687265663D226D70335F746563686E6F736574732F223E6D70335F746563686E6F736574732F3C2F613E20202020202020202030342D4A756C2D323030372030383A3536202020202D2020200A3C696D67207372633D222F69636F6E732F746578742E6769662220616C743D225B5458545D223E203C6120687265663D226E657565735F766F6E5F7261696E616C645F676F65747A2E68746D223E6E657565735F766F6E5F7261696E616C645F676F2E2E2667743B3C2F613E2032312D4D61722D323030372032333A323720202033314B20200A3C696D67207372633D222F69636F6E732F746578742E6769662220616C743D225B5458545D223E203C6120687265663D226E657565735F766F6E5F7261696E616C645F676F65747A302E68746D223E6E657565735F766F6E5F7261696E616C645F676F2E2E2667743B3C2F613E2032312D4D61722D323030372032333A323920202033364B20200A3C696D67207372633D222F69636F6E732F6C61796F75742E6769662220616C743D225B2020205D223E203C6120687265663D2270727565662E706466223E70727565662E7064663C2F613E20202020202020202020202020202032382D4465632D323030362030373A343820202038384B20200A3C68723E3C2F7072653E0A3C2F626F64793E3C2F68746D6C3E0A</Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -305,13 +305,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00D009E3E8DE</MACDest>
         <MACSrc>0011258295B5</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -319,12 +319,12 @@
               <PayloadLength>20</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8090007C00000000000000002</IPSrc>
-              <IPDest>200106F8102D000002D009FFFEE3E8DE</IPDest>
+              <IPSrc><value>200106F8090007C00000000000000002</value></IPSrc>
+              <IPDest><value>200106F8102D000002D009FFFEE3E8DE</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>80</PortSRC>
                   <PortDest>59201</PortDest>
@@ -339,12 +339,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -353,13 +353,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0011258295B5</MACDest>
         <MACSrc>00D009E3E8DE</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -367,12 +367,12 @@
               <PayloadLength>20</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8102D000002D009FFFEE3E8DE</IPSrc>
-              <IPDest>200106F8090007C00000000000000002</IPDest>
+              <IPSrc><value>200106F8102D000002D009FFFEE3E8DE</value></IPSrc>
+              <IPDest><value>200106F8090007C00000000000000002</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>59201</PortSRC>
                   <PortDest>80</PortDest>
@@ -387,12 +387,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -401,13 +401,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0011258295B5</MACDest>
         <MACSrc>00D009E3E8DE</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -415,12 +415,12 @@
               <PayloadLength>20</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8102D000002D009FFFEE3E8DE</IPSrc>
-              <IPDest>200106F8090007C00000000000000002</IPDest>
+              <IPSrc><value>200106F8102D000002D009FFFEE3E8DE</value></IPSrc>
+              <IPDest><value>200106F8090007C00000000000000002</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>59201</PortSRC>
                   <PortDest>80</PortDest>
@@ -435,12 +435,12 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -449,13 +449,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0011258295B5</MACDest>
         <MACSrc>00D009E3E8DE</MACSrc>
         <Ethertype>34525</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv6>
+        <NetworkLayer>
+          <IPv6>
             <IPv6Header>
               <Version>6</Version>
               <TrafficClass>0</TrafficClass>
@@ -463,12 +463,12 @@
               <PayloadLength>20</PayloadLength>
               <NextHeader>6</NextHeader>
               <HopLimit>64</HopLimit>
-              <IPSrc>200106F8102D000002D009FFFEE3E8DE</IPSrc>
-              <IPDest>200106F8090007C00000000000000002</IPDest>
+              <IPSrc><value>200106F8102D000002D009FFFEE3E8DE</value></IPSrc>
+              <IPDest><value>200106F8090007C00000000000000002</value></IPDest>
             </IPv6Header>
             <Protocol>6</Protocol>
-            <pcap:TransportLayer>
-              <pcap:TCP>
+            <TransportLayer>
+              <TCP>
                 <TCPHeader>
                   <PortSRC>59201</PortSRC>
                   <PortDest>80</PortDest>
@@ -483,11 +483,11 @@
                   <Options></Options>
                 </TCPHeader>
                 <Data></Data>
-              </pcap:TCP>
-            </pcap:TransportLayer>
-          </pcap:IPv6>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </TCP>
+            </TransportLayer>
+          </IPv6>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
 </pcap:PCAP>

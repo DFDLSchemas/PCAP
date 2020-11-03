@@ -17,13 +17,13 @@
       <InclLen>70</InclLen>
       <OrigLen>70</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -36,12 +36,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25927</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -49,12 +49,12 @@
                   <Checksum>34285</Checksum>
                 </UDPHeader>
                 <Data>10320100000100000000000006676F6F676C6503636F6D0000100001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -63,13 +63,13 @@
       <InclLen>98</InclLen>
       <OrigLen>98</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -82,12 +82,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>39230</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -95,12 +95,12 @@
                   <Checksum>50981</Checksum>
                 </UDPHeader>
                 <Data>10328180000100010000000006676F6F676C6503636F6D0000100001C00C001000010000010E00100F763D7370663120707472203F616C6C</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -109,13 +109,13 @@
       <InclLen>70</InclLen>
       <OrigLen>70</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -128,12 +128,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25927</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -141,12 +141,12 @@
                   <Checksum>40624</Checksum>
                 </UDPHeader>
                 <Data>F76F0100000100000000000006676F6F676C6503636F6D00000F0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -155,13 +155,13 @@
       <InclLen>298</InclLen>
       <OrigLen>298</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -174,12 +174,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>38823</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -187,12 +187,12 @@
                   <Checksum>55027</Checksum>
                 </UDPHeader>
                 <Data>F76F8180000100060000000606676F6F676C6503636F6D00000F0001C00C000F000100000228000A002805736D747034C00CC00C000F000100000228000A000A05736D747035C00CC00C000F000100000228000A000A05736D747036C00CC00C000F000100000228000A000A05736D747031C00CC00C000F000100000228000A000A05736D747032C00CC00C000F000100000228000A002805736D747033C00CC02A00010001000002580004D8EF251AC0400001000100000258000440E9A719C0560001000100000258000442660919C06C00010001000002580004D8EF3919C08200010001000002580004D8EF2519C09800010001000002580004D8EF391A</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -201,13 +201,13 @@
       <InclLen>70</InclLen>
       <OrigLen>70</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -220,12 +220,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25927</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -233,12 +233,12 @@
                   <Checksum>19569</Checksum>
                 </UDPHeader>
                 <Data>49A10100000100000000000006676F6F676C6503636F6D00001D0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -247,13 +247,13 @@
       <InclLen>70</InclLen>
       <OrigLen>70</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -266,12 +266,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>39033</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -279,12 +279,12 @@
                   <Checksum>52208</Checksum>
                 </UDPHeader>
                 <Data>49A18180000100000000000006676F6F676C6503636F6D00001D0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -293,13 +293,13 @@
       <InclLen>85</InclLen>
       <OrigLen>85</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -312,12 +312,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25912</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -325,12 +325,12 @@
                   <Checksum>6082</Checksum>
                 </UDPHeader>
                 <Data>9BBB010000010000000000000331303401390331393202363607696E2D61646472046172706100000C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -339,13 +339,13 @@
       <InclLen>129</InclLen>
       <OrigLen>129</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -358,12 +358,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>38896</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -371,12 +371,12 @@
                   <Checksum>33461</Checksum>
                 </UDPHeader>
                 <Data>9BBB818000010001000000000331303401390331393202363607696E2D61646472046172706100000C0001C00C000C00010001512500200C36362D3139322D392D3130340367656E09747774656C65636F6D036E657400</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -385,13 +385,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -404,12 +404,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25923</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -417,12 +417,12 @@
                   <Checksum>44897</Checksum>
                 </UDPHeader>
                 <Data>75C00100000100000000000003777777066E6574627364036F72670000010001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -431,13 +431,13 @@
       <InclLen>90</InclLen>
       <OrigLen>90</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -450,12 +450,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>38201</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -463,12 +463,12 @@
                   <Checksum>41751</Checksum>
                 </UDPHeader>
                 <Data>75C08180000100010000000003777777066E6574627364036F72670000010001C00C00010001000140EF0004CC98BE0C</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -477,13 +477,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -496,12 +496,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>62966</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -509,12 +509,12 @@
                   <Checksum>13362</Checksum>
                 </UDPHeader>
                 <Data>F0D40100000100000000000003777777066E6574627364036F726700001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -523,13 +523,13 @@
       <InclLen>102</InclLen>
       <OrigLen>102</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -542,12 +542,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>38092</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -555,12 +555,12 @@
                   <Checksum>24347</Checksum>
                 </UDPHeader>
                 <Data>F0D48180000100010000000003777777066E6574627364036F726700001C0001C00C001C0001000151800010200104F80004000702E081FFFE529A6B</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -569,13 +569,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -588,12 +588,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25923</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -601,12 +601,12 @@
                   <Checksum>42445</Checksum>
                 </UDPHeader>
                 <Data>7F390100000100000000000003777777066E6574627364036F726700001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -615,13 +615,13 @@
       <InclLen>102</InclLen>
       <OrigLen>102</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -634,12 +634,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>37079</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -647,12 +647,12 @@
                   <Checksum>53490</Checksum>
                 </UDPHeader>
                 <Data>7F398180000100010000000003777777066E6574627364036F726700001C0001C00C001C0001000151440010200104F80004000702E081FFFE529A6B</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -661,13 +661,13 @@
       <InclLen>74</InclLen>
       <OrigLen>74</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -680,12 +680,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25923</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -693,12 +693,12 @@
                   <Checksum>36201</Checksum>
                 </UDPHeader>
                 <Data>8DB3010000010000000000000377777706676F6F676C6503636F6D00001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -707,13 +707,13 @@
       <InclLen>94</InclLen>
       <OrigLen>94</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -726,12 +726,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>37057</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -739,12 +739,12 @@
                   <Checksum>3521</Checksum>
                 </UDPHeader>
                 <Data>8DB3818000010001000000000377777706676F6F676C6503636F6D00001C0001C00C0005000100000279000803777777016CC010</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -753,13 +753,13 @@
       <InclLen>76</InclLen>
       <OrigLen>76</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -772,12 +772,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25921</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -785,12 +785,12 @@
                   <Checksum>15626</Checksum>
                 </UDPHeader>
                 <Data>DCA20100000100000000000003777777016C06676F6F676C6503636F6D00001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -799,13 +799,13 @@
       <InclLen>76</InclLen>
       <OrigLen>76</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -818,12 +818,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>36871</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -831,12 +831,12 @@
                   <Checksum>48265</Checksum>
                 </UDPHeader>
                 <Data>DCA28180000100000000000003777777016C06676F6F676C6503636F6D00001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -845,13 +845,13 @@
       <InclLen>75</InclLen>
       <OrigLen>75</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -864,12 +864,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25922</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -877,12 +877,12 @@
                   <Checksum>34913</Checksum>
                 </UDPHeader>
                 <Data>BC1F0100000100000000000003777777076578616D706C6503636F6D00001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -891,13 +891,13 @@
       <InclLen>75</InclLen>
       <OrigLen>75</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -910,12 +910,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>36514</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -923,12 +923,12 @@
                   <Checksum>2017</Checksum>
                 </UDPHeader>
                 <Data>BC1F8180000100000000000003777777076578616D706C6503636F6D00001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -937,13 +937,13 @@
       <InclLen>79</InclLen>
       <OrigLen>79</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -956,12 +956,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25918</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -969,12 +969,12 @@
                   <Checksum>17448</Checksum>
                 </UDPHeader>
                 <Data>266D0100000100000000000003777777076578616D706C65076E6F7467696E6800001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -983,13 +983,13 @@
       <InclLen>79</InclLen>
       <OrigLen>79</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1002,12 +1002,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>36367</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -1015,12 +1015,12 @@
                   <Checksum>49060</Checksum>
                 </UDPHeader>
                 <Data>266D8583000100000000000003777777076578616D706C65076E6F7467696E6800001C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1029,13 +1029,13 @@
       <InclLen>71</InclLen>
       <OrigLen>71</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1048,12 +1048,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25926</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32795</PortSrc>
                   <PortDest>53</PortDest>
@@ -1061,12 +1061,12 @@
                   <Checksum>17006</Checksum>
                 </UDPHeader>
                 <Data>FEE3010000010000000000000377777703697363036F72670000FF0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1075,13 +1075,13 @@
       <InclLen>115</InclLen>
       <OrigLen>115</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1094,12 +1094,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>35877</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32795</PortDest>
@@ -1107,12 +1107,12 @@
                   <Checksum>52068</Checksum>
                 </UDPHeader>
                 <Data>FEE3818000010002000000000377777703697363036F72670000FF0001C00C001C0001000002580010200104F800000002000000000000000DC00C00010001000002580004CC98B858</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1121,13 +1121,13 @@
       <InclLen>82</InclLen>
       <OrigLen>82</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1140,12 +1140,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25915</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32796</PortSrc>
                   <PortDest>53</PortDest>
@@ -1153,12 +1153,12 @@
                   <Checksum>565</Checksum>
                 </UDPHeader>
                 <Data>5A53010000010000000000000131013001300331323707696E2D61646472046172706100000C0001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1167,13 +1167,13 @@
       <InclLen>105</InclLen>
       <OrigLen>105</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1186,12 +1186,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>35886</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32796</PortDest>
@@ -1199,12 +1199,12 @@
                   <Checksum>63792</Checksum>
                 </UDPHeader>
                 <Data>5A53858000010001000000000131013001300331323707696E2D61646472046172706100000C0001C00C000C000100000E10000B096C6F63616C686F737400</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1213,13 +1213,13 @@
       <InclLen>67</InclLen>
       <OrigLen>67</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00C09F32418C</MACDest>
         <MACSrc>00E018B10CAD</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1232,12 +1232,12 @@
               <TTL>64</TTL>
               <Protocol>17</Protocol>
               <Checksum>25930</Checksum>
-              <IPSrc>192.168.170.8</IPSrc>
-              <IPDest>192.168.170.20</IPDest>
+              <IPSrc><value>192.168.170.8</value></IPSrc>
+              <IPDest><value>192.168.170.20</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>32797</PortSrc>
                   <PortDest>53</PortDest>
@@ -1245,12 +1245,12 @@
                   <Checksum>39101</Checksum>
                 </UDPHeader>
                 <Data>208A0100000100000000000003697363036F72670000020001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1259,13 +1259,13 @@
       <InclLen>129</InclLen>
       <OrigLen>129</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0012A9003223</MACDest>
         <MACSrc>00600845E455</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1278,12 +1278,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>27285</Checksum>
-              <IPSrc>192.168.170.56</IPSrc>
-              <IPDest>217.13.4.24</IPDest>
+              <IPSrc><value>192.168.170.56</value></IPSrc>
+              <IPDest><value>217.13.4.24</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>1707</PortSrc>
                   <PortDest>53</PortDest>
@@ -1291,12 +1291,12 @@
                   <Checksum>14832</Checksum>
                 </UDPHeader>
                 <Data>326E01000001000000000000055F6C646170045F7463701744656661756C742D46697273742D536974652D4E616D65065F7369746573026463065F6D736463730B7574656C73797374656D73056C6F63616C0000210001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1305,13 +1305,13 @@
       <InclLen>166</InclLen>
       <OrigLen>166</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00E018B10CAD</MACDest>
         <MACSrc>00C09F32418C</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1324,12 +1324,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>35823</Checksum>
-              <IPSrc>192.168.170.20</IPSrc>
-              <IPDest>192.168.170.8</IPDest>
+              <IPSrc><value>192.168.170.20</value></IPSrc>
+              <IPDest><value>192.168.170.8</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>32797</PortDest>
@@ -1337,12 +1337,12 @@
                   <Checksum>31704</Checksum>
                 </UDPHeader>
                 <Data>208A8180000100040000000003697363036F72670000020001C00C0002000100000E10000E066E732D657874046E727431C00CC00C0002000100000E10000E066E732D6578740473746831C00CC00C0002000100000E100009066E732D657874C00CC00C0002000100000E10000E066E732D657874046C676131C00C</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1351,13 +1351,13 @@
       <InclLen>129</InclLen>
       <OrigLen>129</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00600845E455</MACDest>
         <MACSrc>0012A9003223</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1370,12 +1370,12 @@
               <TTL>58</TTL>
               <Protocol>17</Protocol>
               <Checksum>63603</Checksum>
-              <IPSrc>217.13.4.24</IPSrc>
-              <IPDest>192.168.170.56</IPDest>
+              <IPSrc><value>217.13.4.24</value></IPSrc>
+              <IPDest><value>192.168.170.56</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>1707</PortDest>
@@ -1383,12 +1383,12 @@
                   <Checksum>46444</Checksum>
                 </UDPHeader>
                 <Data>326E85830001000000000000055F6C646170045F7463701744656661756C742D46697273742D536974652D4E616D65065F7369746573026463065F6D736463730B7574656C73797374656D73056C6F63616C0000210001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1397,13 +1397,13 @@
       <InclLen>98</InclLen>
       <OrigLen>98</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0012A9003223</MACDest>
         <MACSrc>00600845E455</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1416,12 +1416,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>27298</Checksum>
-              <IPSrc>192.168.170.56</IPSrc>
-              <IPDest>217.13.4.24</IPDest>
+              <IPSrc><value>192.168.170.56</value></IPSrc>
+              <IPDest><value>217.13.4.24</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>1708</PortSrc>
                   <PortDest>53</PortDest>
@@ -1429,12 +1429,12 @@
                   <Checksum>31825</Checksum>
                 </UDPHeader>
                 <Data>F16101000001000000000000055F6C646170045F746370026463065F6D736463730B7574656C73797374656D73056C6F63616C0000210001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1443,13 +1443,13 @@
       <InclLen>98</InclLen>
       <OrigLen>98</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00600845E455</MACDest>
         <MACSrc>0012A9003223</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1462,12 +1462,12 @@
               <TTL>58</TTL>
               <Protocol>17</Protocol>
               <Checksum>63634</Checksum>
-              <IPSrc>217.13.4.24</IPSrc>
-              <IPDest>192.168.170.56</IPDest>
+              <IPSrc><value>217.13.4.24</value></IPSrc>
+              <IPDest><value>192.168.170.56</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>1708</PortDest>
@@ -1475,12 +1475,12 @@
                   <Checksum>63437</Checksum>
                 </UDPHeader>
                 <Data>F16185830001000000000000055F6C646170045F746370026463065F6D736463730B7574656C73797374656D73056C6F63616C0000210001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1489,13 +1489,13 @@
       <InclLen>140</InclLen>
       <OrigLen>140</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0012A9003223</MACDest>
         <MACSrc>00600845E455</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1508,12 +1508,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>27255</Checksum>
-              <IPSrc>192.168.170.56</IPSrc>
-              <IPDest>217.13.4.24</IPDest>
+              <IPSrc><value>192.168.170.56</value></IPSrc>
+              <IPDest><value>217.13.4.24</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>1709</PortSrc>
                   <PortDest>53</PortDest>
@@ -1521,12 +1521,12 @@
                   <Checksum>30616</Checksum>
                 </UDPHeader>
                 <Data>836101000001000000000000055F6C646170045F7463702430356235323932622D333462382D346662372D383561332D38626565663566643230363907646F6D61696E73065F6D736463730B7574656C73797374656D73056C6F63616C0000210001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1535,13 +1535,13 @@
       <InclLen>140</InclLen>
       <OrigLen>140</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00600845E455</MACDest>
         <MACSrc>0012A9003223</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1554,12 +1554,12 @@
               <TTL>58</TTL>
               <Protocol>17</Protocol>
               <Checksum>63592</Checksum>
-              <IPSrc>217.13.4.24</IPSrc>
-              <IPDest>192.168.170.56</IPDest>
+              <IPSrc><value>217.13.4.24</value></IPSrc>
+              <IPDest><value>192.168.170.56</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>1709</PortDest>
@@ -1567,12 +1567,12 @@
                   <Checksum>62228</Checksum>
                 </UDPHeader>
                 <Data>836185830001000000000000055F6C646170045F7463702430356235323932622D333462382D346662372D383561332D38626565663566643230363907646F6D61696E73065F6D736463730B7574656C73797374656D73056C6F63616C0000210001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1581,13 +1581,13 @@
       <InclLen>83</InclLen>
       <OrigLen>83</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0012A9003223</MACDest>
         <MACSrc>00600845E455</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1600,12 +1600,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>27308</Checksum>
-              <IPSrc>192.168.170.56</IPSrc>
-              <IPDest>217.13.4.24</IPDest>
+              <IPSrc><value>192.168.170.56</value></IPSrc>
+              <IPDest><value>217.13.4.24</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>1710</PortSrc>
                   <PortDest>53</PortDest>
@@ -1613,12 +1613,12 @@
                   <Checksum>6797</Checksum>
                 </UDPHeader>
                 <Data>D06001000001000000000000054752494D4D0B7574656C73797374656D73056C6F63616C0000010001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1627,13 +1627,13 @@
       <InclLen>83</InclLen>
       <OrigLen>83</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00600845E455</MACDest>
         <MACSrc>0012A9003223</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1646,12 +1646,12 @@
               <TTL>58</TTL>
               <Protocol>17</Protocol>
               <Checksum>63649</Checksum>
-              <IPSrc>217.13.4.24</IPSrc>
-              <IPDest>192.168.170.56</IPDest>
+              <IPSrc><value>217.13.4.24</value></IPSrc>
+              <IPDest><value>192.168.170.56</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>1710</PortDest>
@@ -1659,12 +1659,12 @@
                   <Checksum>38409</Checksum>
                 </UDPHeader>
                 <Data>D06085830001000000000000054752494D4D0B7574656C73797374656D73056C6F63616C0000010001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1673,13 +1673,13 @@
       <InclLen>83</InclLen>
       <OrigLen>83</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>0012A9003223</MACDest>
         <MACSrc>00600845E455</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1692,12 +1692,12 @@
               <TTL>128</TTL>
               <Protocol>17</Protocol>
               <Checksum>27302</Checksum>
-              <IPSrc>192.168.170.56</IPSrc>
-              <IPDest>217.13.4.24</IPDest>
+              <IPSrc><value>192.168.170.56</value></IPSrc>
+              <IPDest><value>217.13.4.24</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>1711</PortSrc>
                   <PortDest>53</PortDest>
@@ -1705,12 +1705,12 @@
                   <Checksum>29833</Checksum>
                 </UDPHeader>
                 <Data>766301000001000000000000054752494D4D0B7574656C73797374656D73056C6F63616C0000010001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
   <Packet>
     <PacketHeader>
@@ -1719,13 +1719,13 @@
       <InclLen>83</InclLen>
       <OrigLen>83</OrigLen>
     </PacketHeader>
-    <pcap:LinkLayer>
-      <pcap:Ethernet>
+    <LinkLayer>
+      <Ethernet>
         <MACDest>00600845E455</MACDest>
         <MACSrc>0012A9003223</MACSrc>
         <Ethertype>2048</Ethertype>
-        <pcap:NetworkLayer>
-          <pcap:IPv4>
+        <NetworkLayer>
+          <IPv4>
             <IPv4Header>
               <Version>4</Version>
               <IHL>5</IHL>
@@ -1738,12 +1738,12 @@
               <TTL>58</TTL>
               <Protocol>17</Protocol>
               <Checksum>63649</Checksum>
-              <IPSrc>217.13.4.24</IPSrc>
-              <IPDest>192.168.170.56</IPDest>
+              <IPSrc><value>217.13.4.24</value></IPSrc>
+              <IPDest><value>192.168.170.56</value></IPDest>
             </IPv4Header>
             <Protocol>17</Protocol>
-            <pcap:TransportLayer>
-              <pcap:UDP>
+            <TransportLayer>
+              <UDP>
                 <UDPHeader>
                   <PortSrc>53</PortSrc>
                   <PortDest>1711</PortDest>
@@ -1751,11 +1751,11 @@
                   <Checksum>61445</Checksum>
                 </UDPHeader>
                 <Data>766385830001000000000000054752494D4D0B7574656C73797374656D73056C6F63616C0000010001</Data>
-              </pcap:UDP>
-            </pcap:TransportLayer>
-          </pcap:IPv4>
-        </pcap:NetworkLayer>
-      </pcap:Ethernet>
-    </pcap:LinkLayer>
+              </UDP>
+            </TransportLayer>
+          </IPv4>
+        </NetworkLayer>
+      </Ethernet>
+    </LinkLayer>
   </Packet>
 </pcap:PCAP>
