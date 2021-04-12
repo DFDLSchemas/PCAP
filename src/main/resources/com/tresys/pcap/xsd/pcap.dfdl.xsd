@@ -99,6 +99,11 @@ The message root is 'PCAP'.
       <dfdl:format ref="pcap:defaults" byteOrder="{ $pcap:ByteOrder }" />
 
       <!--
+        Used to eliminate common subexpression in outputValueCalc of InclLen
+        -->
+      <dfdl:defineVariable name="valueLen" type="xs:int" dfdlx:direction="unparseOnly"/>
+
+      <!--
         used for unparsing when breaking up the parts of an IP address string 1.2.3.4 separated by dots.
         It starts as 1.2.3.4
         Then 2.3.4
@@ -197,10 +202,22 @@ The message root is 'PCAP'.
               <xs:element name="PacketHeader">
                 <xs:complexType>
                   <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo source="http://www.ogf.org/dfdl/">
+                        <!--
+                        Common subexpression for valueLength call factored out using NVI.
+                        Note that this is at unparse time, as it is referenced only from
+                        dfdl:outputValueCalc, and note that it is a forward reference into
+                        a "later" part of the infoset.
+                        -->
+                        <dfdl:newVariableInstance ref="pcap:valueLen"
+                          defaultValue="{ dfdl:valueLength(../pcap:LinkLayer, 'bytes') }" />
+                      </xs:appinfo>
+                    </xs:annotation>
                     <xs:element name="Seconds" type="pcap:uint32"/> <!-- TODO: ts_sec should be a dateTime -->
                     <xs:element name="USeconds" type="pcap:uint32"/>
                     <xs:element name="InclLen" type="pcap:uint32" 
-                       dfdl:outputValueCalc="{ if (dfdl:valueLength(../../pcap:LinkLayer, 'bytes') le 60) then 60 else dfdl:valueLength(../../pcap:LinkLayer, 'bytes') }"/>
+                       dfdl:outputValueCalc="{ if ($pcap:valueLen le 60) then 60 else $pcap:valueLen }"/>
                     <xs:element name="OrigLen" type="pcap:uint32" 
                        dfdl:outputValueCalc="{ ../InclLen }"/>
                   </xs:sequence>
@@ -303,7 +320,7 @@ The message root is 'PCAP'.
  <xs:group name="IPAddressGroup">
       <xs:annotation><xs:documentation><![CDATA[
    
-      This grooup is a reusable subroutine of DFDL. It parses a string like 1.2.3.4 into 4 integers named Byte1, Byte2, Byte3, Byte4
+      This group is a reusable subroutine of DFDL. It parses a string like 1.2.3.4 into 4 integers named Byte1, Byte2, Byte3, Byte4
       containing the "." separated integers. 
       
       This is used to unparse IP addresses expressed in the dotted notation that is common. 
