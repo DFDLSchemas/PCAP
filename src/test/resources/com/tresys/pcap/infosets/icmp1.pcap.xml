@@ -38,6 +38,7 @@
               <Checksum>11123</Checksum>
               <IPSrc><value>192.168.158.139</value></IPSrc>
               <IPDest><value>174.137.42.77</value></IPDest>
+              <ComputedChecksum>11123</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>

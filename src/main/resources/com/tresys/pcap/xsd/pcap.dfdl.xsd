@@ -69,7 +69,7 @@ SOFTWARE.
   unqualified names
   -->
 
-  <xs:element name="PCAP" type="tns:PCAP"/>
+  <xs:element name="PCAP" type="pcap:PCAP"/>
 
   <xs:complexType name="PCAP">
     <xs:sequence>

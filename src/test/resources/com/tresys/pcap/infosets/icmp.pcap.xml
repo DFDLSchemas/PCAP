@@ -38,6 +38,7 @@
               <Checksum>11123</Checksum>
               <IPSrc><value>192.168.158.139</value></IPSrc>
               <IPDest><value>174.137.42.77</value></IPDest>
+              <ComputedChecksum>11123</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -83,6 +84,7 @@
               <Checksum>35797</Checksum>
               <IPSrc><value>174.137.42.77</value></IPSrc>
               <IPDest><value>192.168.158.139</value></IPDest>
+              <ComputedChecksum>35797</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -128,6 +130,7 @@
               <Checksum>11120</Checksum>
               <IPSrc><value>192.168.158.139</value></IPSrc>
               <IPDest><value>174.137.42.77</value></IPDest>
+              <ComputedChecksum>11120</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -173,6 +176,7 @@
               <Checksum>35794</Checksum>
               <IPSrc><value>174.137.42.77</value></IPSrc>
               <IPDest><value>192.168.158.139</value></IPDest>
+              <ComputedChecksum>35794</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -218,6 +222,7 @@
               <Checksum>11117</Checksum>
               <IPSrc><value>192.168.158.139</value></IPSrc>
               <IPDest><value>174.137.42.77</value></IPDest>
+              <ComputedChecksum>11117</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -263,6 +268,7 @@
               <Checksum>35782</Checksum>
               <IPSrc><value>174.137.42.77</value></IPSrc>
               <IPDest><value>192.168.158.139</value></IPDest>
+              <ComputedChecksum>35782</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -308,6 +314,7 @@
               <Checksum>11112</Checksum>
               <IPSrc><value>192.168.158.139</value></IPSrc>
               <IPDest><value>174.137.42.77</value></IPDest>
+              <ComputedChecksum>11112</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
@@ -353,6 +360,7 @@
               <Checksum>35777</Checksum>
               <IPSrc><value>174.137.42.77</value></IPSrc>
               <IPDest><value>192.168.158.139</value></IPDest>
+              <ComputedChecksum>35777</ComputedChecksum>
             </IPv4Header>
             <Protocol>1</Protocol>
             <ICMPv4>
