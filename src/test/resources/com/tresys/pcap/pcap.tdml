@@ -65,7 +65,7 @@
   </tdml:parserTestCase>
 
   <tdml:parserTestCase name="pcap_test_dns" root="PCAP"
-    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test">
+    model="com/tresys/pcap/xsd/pcap.dfdl.xsd" description="pcap test" >
     <tdml:document>
       <tdml:documentPart type="file">data/dns.cap</tdml:documentPart>
     </tdml:document>
