@@ -18,7 +18,7 @@ libraryDependencies ++= Seq(
   // instead we want to just pull the dependent schema from github
   //
   "com.owlcyberdefense" % "dfdl-ethernetip" % "1.2.0",
-  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.2.1" % "test",
+  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.5.0" % "test",
   "junit" % "junit" % "4.13.2" % "test",
   "com.github.sbt" % "junit-interface" % "0.13.2" % "test"
 )
