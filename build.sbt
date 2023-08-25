@@ -7,7 +7,7 @@ retrieveManaged := true
 
 useCoursier := false // because of bug, retrieveManaged won't work without this
 
-version := "1.2.0"
+version := "1.3.0"
 
 scalaVersion := "2.12.18"
 
@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
   // to have this dependency schema present. 
   // instead we want to just pull the dependent schema from github
   //
-  "com.owlcyberdefense" % "dfdl-ethernetip" % "1.2.0",
+  "com.owlcyberdefense" % "dfdl-ethernetip" % "1.3.0",
   "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.5.0" % "test",
   "junit" % "junit" % "4.13.2" % "test",
   "com.github.sbt" % "junit-interface" % "0.13.2" % "test"
