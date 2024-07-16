@@ -8,8 +8,6 @@ useCoursier := false // because of bug, retrieveManaged won't work without this
 
 version := "1.4.0"
 
-scalaVersion := "2.12.18"
-
 daffodilVersion := "3.8.0"
 
 libraryDependencies ++= Seq(
