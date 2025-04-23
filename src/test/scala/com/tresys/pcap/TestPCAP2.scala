@@ -39,8 +39,8 @@ import org.junit.AfterClass
 object TestPCAP2 {
   lazy val runner = Runner("/com/tresys/pcap/", "pcap2.tdml")
 
-  @AfterClass def shutDown {
-    runner.reset
+  @AfterClass def shutDown = {
+    runner.reset()
   }
 }
 
