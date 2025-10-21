@@ -1,4 +1,4 @@
-<pcap:PCAP xmlns:pcap="urn:pcap:2.4">
+<PCAP>
   <PCAPHeader>
     <MagicNumber>D4C3B2A1</MagicNumber>
     <Version>
@@ -378,4 +378,4 @@
       </Ethernet>
     </LinkLayer>
   </Packet>
-</pcap:PCAP>
+</PCAP>

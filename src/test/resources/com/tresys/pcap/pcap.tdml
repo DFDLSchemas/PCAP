@@ -4,7 +4,7 @@
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
-  xmlns:pcap="urn:pcap:2.4"
+  xmlns:pcap="urn:owlcyberdefense.com:schema:dfdl:pcap"
   defaultRoundTrip="true"
   defaultConfig="littleEndian">
   
