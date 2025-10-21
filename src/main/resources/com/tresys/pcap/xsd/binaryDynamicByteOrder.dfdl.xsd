@@ -34,40 +34,40 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
 SOFTWARE.
 -->
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
-           xmlns:fn="http://www.w3.org/2005/xpath-functions"
-           xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
-           xmlns:bb="urn:basicBinary"
-           xmlns:db="urn:dynamicEndianBinary"
-           xmlns:tns="urn:dynamicEndianBinary"
-           targetNamespace="urn:dynamicEndianBinary">
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+        xmlns:fn="http://www.w3.org/2005/xpath-functions"
+        xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+        xmlns:eth="urn:owlcyberdefense.com:schema:dfdl:ethernet:eth"
+        xmlns:pcap="urn:owlcyberdefense.com:schema:dfdl:pcap"
+        targetNamespace="urn:owlcyberdefense.com:schema:dfdl:pcap">
 
-  <xs:import namespace="urn:basicBinary"
-             schemaLocation="com/owlcyberdefense/dfdl/xsd/basicByteBinary.dfdl.xsd"/>
+  <import namespace="urn:owlcyberdefense.com:schema:dfdl:ethernet:eth"
+             schemaLocation="/com/owlcyberdefense/dfdl/xsd/ethernetIP.dfdl.xsd"/>
 
-  <xs:annotation>
-    <xs:appinfo source="http://www.ogf.org/dfdl/">
+  <annotation>
+    <appinfo source="http://www.ogf.org/dfdl/">
 
       <dfdl:defineFormat name="binaryDynamicByteOrder">
-        <dfdl:format ref="bb:basicByteBinary" byteOrder="{ $dfdl:byteOrder }"/>
+        <dfdl:format ref="eth:basicByteBinary" byteOrder="{ $dfdl:byteOrder }"/>
       </dfdl:defineFormat>
 
-      <dfdl:format ref="tns:binaryDynamicByteOrder"/>
+      <dfdl:format ref="pcap:binaryDynamicByteOrder"/>
 
-    </xs:appinfo>
-  </xs:annotation>
+    </appinfo>
+  </annotation>
 
-<xs:simpleType name="uint16" dfdl:lengthKind="explicit" dfdl:length="16">
-  <xs:restriction base="xs:unsignedInt"/>
-</xs:simpleType>
+<simpleType name="uint16" dfdl:lengthKind="explicit" dfdl:length="16">
+  <restriction base="xs:unsignedInt"/>
+</simpleType>
 
-<xs:simpleType name="uint32" dfdl:lengthKind="explicit" dfdl:length="32">
-  <xs:restriction base="xs:unsignedInt"/>
-</xs:simpleType>
+<simpleType name="uint32" dfdl:lengthKind="explicit" dfdl:length="32">
+  <restriction base="xs:unsignedInt"/>
+</simpleType>
 
-<xs:simpleType name="int32" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes">
-  <xs:restriction base="xs:int"/>
-</xs:simpleType>
+<simpleType name="int32" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes">
+  <restriction base="xs:int"/>
+</simpleType>
 
-</xs:schema>
+</schema>

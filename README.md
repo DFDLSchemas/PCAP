@@ -85,3 +85,24 @@ The above command sets `DAFFODIL_CLASSPATH` so that ethernetIP’s jar file can 
 found by PCAP when you issue daffodil command lines.
 
 After the above steps, the daffodil CLI can be used to parse PCAP files. 
+
+## Usage as a Component DFDL Schema
+
+To use PCAP data as a component (for example as the payload of a format that carries files)
+you would add this namespace prefix definition:
+
+    xmlns:pcap="urn:owlcyberdefense.com:schema:dfdl:pcap"
+
+then import the `pcap-type.dfdl.xsd` file like this:
+
+    <import namespace="urn:owlcyberdefense.com:schema:dfdl:pcap"
+            schemaLocation="/com/tresys/pcap/xsd/pcap-type.dfdl.xsd"/>
+
+then one can define a local element like this:
+
+    <element name="pcap" type="pcap:PCAP"/>
+
+> **TIP**:
+> The [envelope-payload DFDL Schema](
+> https://github.com/DFDLSchemas/envelope-payload
+) uses this PCAP schema as a component. 

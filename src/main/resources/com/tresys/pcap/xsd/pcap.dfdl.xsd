@@ -33,35 +33,27 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
 SOFTWARE.
 -->
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
-           xmlns:fn="http://www.w3.org/2005/xpath-functions"
-           xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
-           xmlns:dfdlx="http://www.ogf.org/dfdl/dfdl-1.0/extensions"
-           xmlns:eth="urn:ethernet"
-           xmlns:db="urn:dynamicEndianBinary"
-           xmlns:pcap="urn:pcap:2.4"
-           xmlns:tns="urn:pcap:2.4"
-           targetNamespace="urn:pcap:2.4">
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+        xmlns:fn="http://www.w3.org/2005/xpath-functions"
+        xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+        xmlns:dfdlx="http://www.ogf.org/dfdl/dfdl-1.0/extensions"
+        xmlns:pcap="urn:owlcyberdefense.com:schema:dfdl:pcap">
 
-  <xs:import namespace="urn:dynamicEndianBinary"
-             schemaLocation="binaryDynamicByteOrder.dfdl.xsd"/>
+  <!-- no target namespace so our global element doesn't require prefixes -->
 
-  <xs:import
-    namespace="urn:ethernet"
-    schemaLocation="com/owlcyberdefense/dfdl/xsd/ethernetIP.dfdl.xsd"/>
+  <import
+    namespace="urn:owlcyberdefense.com:schema:dfdl:pcap"
+    schemaLocation="pcap-type.dfdl.xsd"/>
 
-  <xs:annotation>
-    <xs:appinfo source="http://www.ogf.org/dfdl/">
+  <annotation>
+    <appinfo source="http://www.ogf.org/dfdl/">
 
-      <dfdl:format ref="db:binaryDynamicByteOrder"/>
+      <dfdl:format ref="pcap:binaryDynamicByteOrder"/>
 
-      <!--
-       Used to eliminate common subexpression in outputValueCalc of InclLen
-       -->
-      <dfdl:defineVariable name="valueLen" type="xs:int" dfdlx:direction="unparseOnly"/>
-    </xs:appinfo>
-  </xs:annotation>
+    </appinfo>
+  </annotation>
 
   <!--
   Since this is a DFDL schema for a concrete file format, we have a root global element.
@@ -69,123 +61,6 @@ SOFTWARE.
   unqualified names
   -->
 
-  <xs:element name="PCAP" type="pcap:PCAP"/>
+  <element name="PCAP" type="pcap:PCAP"/>
 
-  <xs:complexType name="PCAP">
-    <xs:sequence>
-      <xs:element name="PCAPHeader">
-        <xs:complexType>
-          <xs:sequence>
-            <!--
-                 We depend on external variable $dfdl:byteOrder to specify what the output's byte order should be.
-             -->
-            <!--
-                 Versions of Daffodil before 2.6.0 had a bug and weren't accepting the dfdl:property syntax for this
-                 outputValueCalc property. So for compatibility with 2.5.0 and 2.4.0 of Daffodil, we've rewritten it
-                 to the conventional short-form syntax that is accepted in all releases of Daffodil.
-             -->
-            <xs:element name="MagicNumber" type="xs:hexBinary" dfdl:lengthKind="explicit"
-                        dfdl:length="4" dfdl:lengthUnits="bytes"
-                        dfdl:outputValueCalc="{
-                            if ($dfdl:byteOrder eq 'bigEndian') 
-                            then xs:hexBinary('A1B2C3D4') 
-                            else xs:hexBinary('D4C3B2A1') 
-                          }" >
-              <!-- when parsing, however, a PCAP file specifies the byte order in the value of the first element. -->
-              <xs:annotation>
-                <xs:appinfo source="http://www.ogf.org/dfdl/">
-                  <dfdl:assert message="Magic number was not 0xA1B2C3D4 (for bigEndian) or 0xD4C3B2A1 (for littleEndian)."
-                               test="{ (. eq xs:hexBinary('A1B2C3D4')) or (. eq xs:hexBinary('D4C3B2A1')) }" />
-                  <dfdl:setVariable ref="dfdl:byteOrder"
-                                    value="{ if (. eq xs:hexBinary('A1B2C3D4')) then 'bigEndian' else 'littleEndian' }" />
-                </xs:appinfo>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="Version">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element name="Major" type="db:uint16" />
-                  <xs:element name="Minor" type="db:uint16" />
-                  <xs:sequence>
-                    <xs:annotation>
-                      <xs:appinfo source="http://www.ogf.org/dfdl/">
-                        <dfdl:assert message="PCAP version must be 2.4"
-                                     test="{ (xs:unsignedInt(./Major) eq 2) and (xs:unsignedInt(./Minor) eq 4) }" />
-                      </xs:appinfo>
-                    </xs:annotation>
-                  </xs:sequence>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="Zone" type="db:int32" />
-            <xs:element name="SigFigs" type="db:uint32" />
-            <xs:element name="SnapLen" type="db:uint32" />
-            <xs:element name="Network" type="db:uint32" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-
-      <xs:element name="Packet" maxOccurs="unbounded">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="PacketHeader">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:annotation>
-                    <xs:appinfo source="http://www.ogf.org/dfdl/">
-                      <!--
-                      Common subexpression for valueLength call factored out using NVI.
-                      Note that this is at unparse time, as it is referenced only from
-                      dfdl:outputValueCalc, and note that it is a forward reference into
-                      a "later" part of the infoset.
-                      -->
-                      <dfdl:newVariableInstance ref="pcap:valueLen"
-                                                defaultValue="{ dfdl:valueLength(../LinkLayer, 'bytes') }" />
-                    </xs:appinfo>
-                  </xs:annotation>
-                  <xs:element name="Seconds" type="db:uint32"/> <!-- TODO: ts_sec should be a dateTime -->
-                  <xs:element name="USeconds" type="db:uint32"/>
-                  <xs:element name="InclLen" type="db:uint32"
-                              dfdl:outputValueCalc="{ if ($pcap:valueLen le 60) then 60 else $pcap:valueLen }"/>
-                  <xs:element name="OrigLen" type="db:uint32"
-                              dfdl:outputValueCalc="{ ../InclLen }"/>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="LinkLayer" type="pcap:LinkLayer" dfdl:lengthUnits="bytes" dfdl:lengthKind="explicit"
-                        dfdl:length="{ ../PacketHeader/InclLen }"/>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-
-  <!-- LINK LAYER -->
-
-  <xs:complexType name="LinkLayer">
-    <xs:choice>
-      <xs:choice dfdl:choiceDispatchKey="{ xs:string(../../PCAPHeader/Network) }">
-        <xs:element name="Ethernet" type="eth:Ethernet" dfdl:choiceBranchKey="1"/>
-        <!-- add additional network types here -->
-      </xs:choice>
-      <xs:sequence>
-        <!--
-          If you want a good diagnostic message about a choice that isn't one of the viable dispatch keys,
-          then this nested choice idiom is the way to do that.
-
-          Without this, you'll still get a diagnostic about "All choice alternatives failed" and it will displaty
-          the offending choice dispatch key value, and give you the line number in the schema. So not bad, but not
-          a specific diagnostic message mentioning the data element that had the incorrect value.
-          -->
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:assert
-              message="{ fn:concat('Link layer type unknown. PCAPHeader/Network was ', xs:string(../../PCAPHeader/Network)) }"
-              test="{ fn:false() }"/>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:sequence>
-    </xs:choice>
-  </xs:complexType>
-
-</xs:schema>
+</schema>
