@@ -1,17 +1,13 @@
-name := "dfdl-pcap"
+val root = (project in file("."))
+  .settings(
+    name := "dfdl-pcap",
 
-organization := "com.tresys"
+    organization := "com.tresys",
 
-retrieveManaged := true
+    version := "1.4.1",
 
-useCoursier := false // because of bug, retrieveManaged won't work without this
-
-version := "1.4.1"
-
-daffodilVersion := "4.0.0"
-
-libraryDependencies ++= Seq(
-  "com.owlcyberdefense" %% "dfdl-ethernetip" % "1.5.0"
-)
-
-enablePlugins(DaffodilPlugin)
+    libraryDependencies ++= Seq(
+      ("com.owlcyberdefense" % "dfdl-ethernetip" % "1.5.0").daffodilPlugin(daffodilVersion.value)
+    )
+  )
+  .daffodilProject(crossDaffodilVersions = Seq("4.0.0"))
